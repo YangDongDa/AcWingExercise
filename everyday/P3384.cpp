@@ -26,7 +26,7 @@ void inOrder(BiTNode *T){
         return;
     }
     inOrder(T->lchild);
-    cout << T->data;
+    printf("%c ", T->data);
     inOrder(T->rchild);
 }
 BiTNode *createBiTree(){
