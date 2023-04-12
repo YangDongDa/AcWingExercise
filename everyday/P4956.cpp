@@ -3,9 +3,9 @@
 using namespace std;
 typedef struct Element
 {
-    int V;
-    int A;
-    int B;
+    long V;
+    long A;
+    long B;
 } Element;
 bool cmp(Element a, Element b)
 {
@@ -15,7 +15,7 @@ Element E[10001];
 int main (int argc, char *argv[])
 {
     int n;
-    int Max,Min;
+    long Max,Min;
     cin >> n;
     for (int i = 1; i <= n; i++) {
         cin >> E[i].A >> E[i].B;
@@ -25,7 +25,7 @@ int main (int argc, char *argv[])
     sort(E + 1, E + n + 1, cmp);
     Max = E[n].V;
     Min = Max; 
-    cout << Max << " ";
+    // cout << Max << " ";
     while(true){
         if(Min * (E[1].B + 1) > E[1].A){
             Min--;
@@ -35,7 +35,7 @@ int main (int argc, char *argv[])
             break;
         }
     }
-    cout << Min << endl;
+    cout << Min<< " "<< Max << endl;
 
     return 0;
 }
