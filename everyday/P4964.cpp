@@ -68,8 +68,8 @@ int main (int argc, char *argv[])
         get_max(x,xmax,n,a);
         get_min(y,xmin,n,a);
         for(int j = 1; j <= n - a + 1; j++){
-            cout<<xmax[j]<<" "<<xmin[j]<<endl;
-            sum = (sum + xmax[j] * xmin[j]) % 998244353;
+            // cout<<xmax[j]<<" "<<xmin[j]<<endl;
+            sum = (sum + (long long)xmax[j] * xmin[j]) % 998244353; //爆int
         }
 
     }
